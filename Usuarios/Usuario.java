@@ -2,7 +2,7 @@ package Livraria.Usuarios;
 
 public class Usuario {
     private static int Contadorid = 0 ;
-    private int id;
+    protected int id;
     private String nome;
     private String email;
     private String senha;
@@ -22,5 +22,7 @@ public class Usuario {
 
     public String getSenha() { return senha; }
     public void setSenha(String senha) { this.senha = senha; }
+
+    public int getId() { return id; }
 
 }

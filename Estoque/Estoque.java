@@ -1,3 +1,4 @@
+package Livraria.Estoque;
 class Estoque {
     private List<Livro> inventario;
 

@@ -1,5 +1,7 @@
 package Livraria;
 
+import Livraria.Estoque.Estoque;
+
 public class Main {
     public static void main(String[] args) {
         Estoque livraria = new Estoque();

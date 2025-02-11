@@ -1,4 +1,4 @@
-package Livraria;
+package Livraria.Estoque;
 
 import java.util.ArrayList;
 import java.util.List;

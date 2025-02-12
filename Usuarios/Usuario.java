@@ -1,15 +1,13 @@
-package Livraria.Usuarios;
+package Usuarios;
 
 public class Usuario {
     private static int Contadorid = 0 ;
-    private static int ContadorPessoas = 0 ;
     protected int id;
     private String nome;
     private String email;
     private String senha;
 
     public Usuario( String nome, String email, String senha) {
-        ContadorPessoas++;
         this.id = Contadorid++;
         this.nome = nome;
         this.email = email;
@@ -18,14 +16,9 @@ public class Usuario {
 
      public Usuario(int id, String nome, String email, String senha) {
         this.id = id;
-        ContadorPessoas++;
         this.nome = nome;
         this.email = email;
         this.senha = senha;
-
-        if (id >= Contadorid) {
-            Contadorid = id + 1;
-        }
     }
 
     public String getNome() { return nome; }
@@ -41,13 +34,18 @@ public class Usuario {
 
 }
 
-class Adimin extends Usuario {
-    public Adimin(String nome, String email, String senha) {
+class Vendedor extends Usuario {
+    public Vendedor(String nome, String email, String senha) {
         super(nome, email, senha);
     }
 }
 class Cliente extends Usuario {
     public Cliente(String nome, String email, String senha) {
+        super(nome, email, senha);
+    }
+}
+class Gerenete extends Usuario {
+    public Gerenete(String nome, String email, String senha) {
         super(nome, email, senha);
     }
 }

@@ -2,12 +2,14 @@ package Livraria.Usuarios;
 
 public class Usuario {
     private static int Contadorid = 0 ;
+    private static int ContadorPessoas = 0 ;
     protected int id;
     private String nome;
     private String email;
     private String senha;
 
     public Usuario( String nome, String email, String senha) {
+        ContadorPessoas++;
         this.id = Contadorid++;
         this.nome = nome;
         this.email = email;
@@ -25,4 +27,15 @@ public class Usuario {
 
     public int getId() { return id; }
 
+}
+
+class Adimin extends Usuario {
+    public Adimin(String nome, String email, String senha) {
+        super(nome, email, senha);
+    }
+}
+class Cliente extends Usuario {
+    public Cliente(String nome, String email, String senha) {
+        super(nome, email, senha);
+    }
 }

@@ -16,6 +16,18 @@ public class Usuario {
         this.senha = senha;
     }
 
+     public Usuario(int id, String nome, String email, String senha) {
+        this.id = id;
+        ContadorPessoas++;
+        this.nome = nome;
+        this.email = email;
+        this.senha = senha;
+
+        if (id >= Contadorid) {
+            Contadorid = id + 1;
+        }
+    }
+
     public String getNome() { return nome; }
     public void setNome(String nome) { this.nome = nome; }
 

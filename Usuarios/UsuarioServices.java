@@ -44,5 +44,12 @@ public class UsuarioServices {
           System.out.println("Erro ao escrever no arquivo: " + e.getMessage());
       }
     }
+
+    public void EditarUsuario(int id, String novoNome, String novoEmail, String novaSenha) {
+      RemoverUsuario(id);
+      Usuario usuarioEditado = new Usuario(id, novoNome, novoEmail, novaSenha);
+      CriarUsuario(usuarioEditado);
+      System.out.println("Usuário editado com sucesso!");
+  }
 }
 

@@ -44,8 +44,8 @@ class Cliente extends Usuario {
         super(nome, email, senha);
     }
 }
-class Gerenete extends Usuario {
-    public Gerenete(String nome, String email, String senha) {
+class Gerente extends Usuario {
+    public Gerente(String nome, String email, String senha) {
         super(nome, email, senha);
     }
 }
